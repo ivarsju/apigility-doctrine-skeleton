@@ -1,0 +1,35 @@
+<?php
+
+return array(
+    'doctrine' => array(
+        'connection' => array(
+            // Configuration for service `doctrine.connection.orm_default` service
+            'orm_default' => array(
+                'driverClass' => 'Doctrine\DBAL\Driver\PDOMySql\Driver',
+                // connection parameters, see
+                // http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
+                'params' => array(
+                    'host'     => 'localhost',
+                    'port'     => '3306',
+                    'user'     => 'username',
+                    'password' => 'password',
+                    'dbname'   => 'database',
+                )
+            ),
+        ),
+        'driver' => array(
+            'default_annotation_driver' => array(
+                'class' => 'Doctrine\\ORM\\Mapping\\Driver\\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => array(
+                    0 => APPLICATION_PATH . '/module/Application/src/Application/Entity',
+                ),
+            ),
+            'orm_default' => array(
+                'drivers' => array(
+                    'Application\\Entity' => 'default_annotation_driver',
+                )
+            )
+        )
+    )
+);
