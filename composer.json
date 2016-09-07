@@ -30,10 +30,12 @@
         "zendframework/zendframework": "~2.4",
         "zfcampus/zf-apigility": "~1.1",
         "zfcampus/zf-apigility-documentation": "^1.0.5",
-        "zfcampus/zf-apigility-documentation-apiblueprint": "^1.1",
+        "zfcampus/zf-apigility-documentation-apiblueprint": "1.1.0",
         "zfcampus/zf-development-mode": "~2.0",
         "doctrine/doctrine-orm-module": "^0.9.1",
-        "zfcampus/zf-apigility-doctrine": "^1.0"
+        "zfcampus/zf-apigility-doctrine": "^1.0",
+        "hybridauth/hybridauth": "dev-3.0.0-Remake",
+        "rwoverdijk/assetmanager": "^1.7"
     },
     "require-dev": {
         "zendframework/zftool": "dev-master",

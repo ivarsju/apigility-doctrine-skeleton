@@ -4,6 +4,8 @@
  * @copyright Copyright (c) 2014 Zend Technologies USA Inc. (http://www.zend.com)
  */
 
+//namespace Application;
+
 return array(
     'router' => array(
         'routes' => array(

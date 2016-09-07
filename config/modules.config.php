@@ -26,4 +26,6 @@ return array(
     'Phpro\\DoctrineHydrationModule',
     'ZF\\Apigility\\Doctrine\\Server',
     'ZF\\Apigility\\Documentation\\ApiBlueprint',
+    'HybridAuth',
+    'Status',
 );

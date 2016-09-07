@@ -1,3 +1,34 @@
+#Quick Setup
+
+##Install and configure
+- Create project directory
+- Install Apigility in project directory:
+```console
+$ cd path/to/project-direcotry
+$ git clone https://github.com/ivarsju/apigility-doctrine-social-logins-skeleton.git .
+$ composer install
+```
+- Create DB
+- For MySQL users - run migrations/oauth-mysql.sql (other DB engines can use it as example)
+- Config DB: go to config/autoload and rename doctrine.local.php.dist to doctrine.local.php and change DB settings here
+- Create a vhost to api.example.com with path/to/project-direcotry/public as Document Root
+- Config Facebook: go to config/autoload and rename local.php.dist to local.php and change Facebook settings here
+- You can add more providers in local.php
+- In local.php change publicUrl to http://api.example.com (or www.example.com to test CORS)
+- In local.php change cryptoKey to something very secure
+- Change urls to http://api.example.com in public/login.html
+
+##Quick start
+- Open api.example.com/login.html to test login funkcionality.
+- You can serve login.html and receive.html on seperate subdomain (e.g. www.example.com) to test CORS.
+
+##Sources
+- Apigility https://apigility.org/
+- Skeleton forked from https://github.com/ivarsju/apigility-doctrine-social-logins-skeleton
+- Social logins documentation https://github.com/PowerKiKi/apigility-documentation/blob/social-login/recipes/integrate-social-logins.md
+- Ping test https://apigility.org/documentation/intro/getting-started
+
+
 #FULL FEATURED APIGILITY 1.3 SKELETON
 
 This is basically the Zend Apigility v1.3 Skeleton App with the following enhancements:

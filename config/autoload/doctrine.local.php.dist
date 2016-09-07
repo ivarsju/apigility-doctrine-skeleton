@@ -11,9 +11,10 @@ return array(
                 'params' => array(
                     'host'     => 'localhost',
                     'port'     => '3306',
-                    'user'     => 'username',
-                    'password' => 'password',
-                    'dbname'   => 'database',
+                    'user'     => 'root',
+                    'password' => 'root',
+                    'dbname'   => 'oauth',
+                    'charset'  => 'utf8',
                 )
             ),
         ),
@@ -22,12 +23,12 @@ return array(
                 'class' => 'Doctrine\\ORM\\Mapping\\Driver\\AnnotationDriver',
                 'cache' => 'array',
                 'paths' => array(
-                    0 => APPLICATION_PATH . '/module/Application/src/Application/Entity',
+                    APPLICATION_PATH . '/module/Application/src/Application/Model',
                 ),
             ),
             'orm_default' => array(
                 'drivers' => array(
-                    'Application\\Entity' => 'default_annotation_driver',
+                    'Application\\Model' => 'default_annotation_driver',
                 )
             )
         )

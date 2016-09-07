@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        var Authorization = null;
+
+        function openpopup(a) {
+            console.log(a.href);
+            console.log('start login: ' + a.href);
+            window.open(a.href, "", "width=600px,height=300px");
+
+            return false;
+        }
+
+        function success(token) {
+            console.log('login success !', token);
+            var user = JSON.parse(atob(token.split('.')[1]));
+            console.log(user);
+
+            document.body.innerHTML += '<hr><img src="' + user.photo + '" width="50" /> ' + user.name + ' (#' + user.id + ')';
+
+            // store token in local storage
+            Authorization = token;
+            // use token for all API request
+        }
+
+        function statusping(a) {
+            var request = new XMLHttpRequest();
+            request.open('GET', a.href);
+            request.responseType = 'json';
+            if (Authorization) {
+                request.setRequestHeader('Authorization', Authorization);
+            }
+
+            request.onload = function() {
+                if (this.status == 200) {
+                    // Success!
+                    console.log(this.response);
+                } else {
+                    // We reached our target server, but it returned an error
+                    console.log(this.status + ' ' + this.statusText);
+                }
+            };
+
+            request.onerror = function() {
+                // There was a connection error of some sort
+                console.log('connection error');
+            };
+
+            request.send();
+
+            return false;
+        }
+    </script>
+</head>
+<body>
+<h1>Login demo page</h1>
+
+<p>This simulate a page server from <strong>WWW</strong>.example.com and should be served as such to demonstrate CORS issues. Open the console to see what's going on.</p>
+
+<a onclick="return openpopup(this)" href="http://api.example.com/hybridauth?provider=Facebook">Login with Facebook</a>
+<br>
+<a onclick="return statusping(this);" href="http://api.example.com/ping">Ping</a>
+
+</body>
+</html>
