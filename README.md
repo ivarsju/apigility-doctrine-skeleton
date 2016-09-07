@@ -19,7 +19,7 @@ $ composer install
 - Change urls to http://api.example.com in public/login.html
 
 ##Quick start
-- Open api.example.com/login.html to test login funkcionality.
+- Open api.example.com/login.html to test login functionality.
 - You can serve login.html and receive.html on seperate subdomain (e.g. www.example.com) to test CORS.
 
 ##Sources
