@@ -24,7 +24,7 @@ $ composer install
 
 ##Sources
 - Apigility https://apigility.org/
-- Skeleton forked from https://github.com/ivarsju/apigility-doctrine-social-logins-skeleton
+- Skeleton forked from https://github.com/vik-singh/apigility-doctrine-skeleton
 - Social logins documentation https://github.com/PowerKiKi/apigility-documentation/blob/social-login/recipes/integrate-social-logins.md
 - Ping test https://apigility.org/documentation/intro/getting-started
 
