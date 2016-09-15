@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'publicUrl'  => 'http://www.example.com/',
+    'publicUrl'  => 'http://www.example.com',
     'cryptoKey'  => 'MySuperSecretCryptoKey',
     'hybridauth' => [
         'providers' => [

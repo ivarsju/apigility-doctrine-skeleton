@@ -93,7 +93,7 @@ class HybridAuthController extends AbstractActionController
         $jwt = new \OAuth2\Encryption\Jwt();
         $token = $jwt->encode($message, $this->cryptoKey);
 
-        $url = $this->publicUrl . 'receive.html?token=' . $token;
+        $url = $this->publicUrl . '/receive.html?token=' . $token;
 
         return $this->redirect()->toUrl($url);
     }
