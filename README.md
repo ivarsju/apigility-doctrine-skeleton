@@ -20,6 +20,10 @@ $ composer install
 - In local.php change publicUrl to http://api.example.com (or www.example.com to test CORS)
 - In local.php change cryptoKey to something very secure
 - Change urls to http://api.example.com in public/login.html
+- Enable the development mode:
+```console
+$ php public/index.php development enable
+```
 
 ##Quick start
 - Open http://api.example.com/login.html to test login functionality.
