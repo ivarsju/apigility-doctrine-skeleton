@@ -1,6 +1,6 @@
 #Quick Setup
 
-This is Apigility Skeleton App with social logins (OAuth) integration and Facebook as provider example. You can add more providers later on. Read more in section [FULL FEATURED APIGILITY 1.3 SKELETON](#FULL-FEATURED-APIGILITY-1.3-SKELETON).
+This is Apigility Skeleton App with social logins (OAuth) integration and Facebook as provider example. You can add more providers later on. Read more in section [FULL FEATURED APIGILITY 1.3 SKELETON](#full-featured-apigility-13-skeleton).
 
 ##Install and configure
 - Create project directory
