@@ -49,15 +49,13 @@ class HybridAuthController extends AbstractActionController
      */
     private function getProvider()
     {
-        $uri = $this->getRequest()->getUri();
-        $base = sprintf('%s://%s', $uri->getScheme(), $uri->getHost());
 
         $provider = $this->getRequest()->getQuery('provider');
         $config = $this->hybridauthConfiguration;
 
         // CAUTION: Be sure to change the route name according to your need !
         $routeName = 'hybrid-auth.rpc.hybrid-auth';
-        $config['callback'] = $base . $this->url()->fromRoute($routeName, ['action' => 'callback']) . '?provider=' . $provider;
+        $config['callback'] = $this->publicUrl . $this->url()->fromRoute($routeName, ['action' => 'callback']) . '?provider=' . $provider;
 
         $hybridauth = new \Hybridauth\Hybridauth($config);
         $adapter = $hybridauth->getAdapter($provider);
