@@ -5,10 +5,11 @@ namespace Application\Model;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
-     * User
+ * User
  * @ORM\Table(uniqueConstraints={
  *   @ORM\UniqueConstraint(name="user_email",columns={"email"}),
- * })
+ * },
+ * name="user")
  * @ORM\Entity(repositoryClass="Application\Repository\UserRepository")
  */
 class User

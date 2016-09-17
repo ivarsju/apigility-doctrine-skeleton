@@ -8,7 +8,8 @@ use Doctrine\ORM\Mapping as ORM;
  * An identity coming from a 3rd party identity provider (Google, Facebook, etc.)
  * @ORM\Table(uniqueConstraints={
  *   @ORM\UniqueConstraint(name="identity",columns={"provider", "provider_id"}),
- * })
+ * },
+ * name="identity")
  * @ORM\Entity(repositoryClass="Application\Repository\IdentityRepository")
  */
 class Identity
